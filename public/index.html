@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Temy Test Environment</title>
+	<link rel="stylesheet" href="app.css" type="text/css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+    
+	 <div class="row">
+    <h1>Test Unit</h1>
+    <div style="width: 30%; margin: 25px auto;">
+		<!--need to use correct url to mock server...-->
+        <form action="https://koalua80-gdicm-debug.run.goorm.io/users" method="POST">
+            <div class="form-group">
+                <input class="form-control" type="text" name="name" id="name" placeholder="Name *" pattern="^[a-zA-Z\s]+$" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="email" name="email" placeholder="Email *" title="Contact email (format: 		 								xxx@xxx.xxx)" 
+    					pattern="[a-zA-Z0-9!#$%&amp;'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*" required>
+            </div>
+			
+			<!--Dropdown Menu-->
+			
+            <div class="form-group">
+                <select class="form-control" id="country"  type="text" name="country_id" required >
+                	<option selected disabled value>Select country</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <select class="form-control " id="state" type="text" name="state_id" title="Make your choose" required>
+                	
+                </select>
+            </div>
+            <div class="form-group">
+                <select class="form-control" id="city" type="text" name="city_id" required>
+                	
+                </select>
+            </div>
+           <!--End of Dropdown Menu-->
+			
+            <div class="form-group">
+                <input class="form-control" type="tel" name="phone_number" placeholder="Phone *" pattern="[0-9]{12}" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="adress" placeholder="Adress">
+            </div>
+            <div class="form-group">
+                <textarea class="form-control" name="about_me" maxlength="500" placeholder="About Me"></textarea>
+            </div>
+            <div class="form-group">
+                <button class="btn btn-lg btn-primary btn-block">Submit</button>
+            </div>
+        </form>
+		
+		<!--Display Users Info-->
+        <h2 >
+		   Display Data
+		</h2>
+		<hr>
+		<p id="q">
+		</p>
+  		</div>		 
+    </div>
+</div>
+	<script type="text/javascript" src="app.js"></script>
+</body>
+</html>
